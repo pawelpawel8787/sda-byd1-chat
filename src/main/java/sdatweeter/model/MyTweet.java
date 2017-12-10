@@ -8,22 +8,22 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Entity
-@Table
+@Table(name = "MY_TWEET")
 public class MyTweet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tweet_id")
+    @Column(name = "TWEET_ID")
     private int tweet_id;
 
     @ManyToOne
-    @JoinColumn(name="user_id", nullable=false)
+    @JoinColumn(name="USER_ID", nullable=false)
     private User user;
 
-    @Column(name = "timestamp")
+    @Column(name = "TIMESTAMP")
     private Long timestamp;
 
-    @Column(name = "message")
+    @Column(name = "MESSAGE")
     private String message;
 
 

@@ -11,21 +11,21 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Entity
-@Table (name = "user")
+@Table (name = "USER_DETAILS")
 public class User {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
+    @Column(name = "USER_ID")
     private int user_id;
 
-    @Column(name = "nick")
+    @Column(name = "NICK")
     private String nick;
 
-    @Column(name = "pass")
+    @Column(name = "PASS")
     private String pass;
 
-    @OneToMany(mappedBy="user_id", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
     private List<MyTweet> orderList = new ArrayList<MyTweet>();
 
 
