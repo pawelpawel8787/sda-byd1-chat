@@ -1,23 +1,23 @@
-package sdatweeter.model.DAO;
+package sdatwitter.model.DAO;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import sdatweeter.model.MyTweet;
-import sdatweeter.utility.HibernateUtil;
+import sdatwitter.model.User;
+import sdatwitter.utility.HibernateUtil;
 
 
-public class MyTweetDAO {
+public class UserDAO {
 
-    public Integer addMyTweet(MyTweet myTweet) {
+    public Integer addUser(User user) {
 
         Session session = HibernateUtil.getHibernateSession().getSessionFactory().openSession();
         Transaction tx = null;
-        Integer myTweetID = null;
+        Integer userID = null;
 
         try {
             tx = session.beginTransaction();
-            myTweetID = (Integer)session.save(myTweet);
+            userID = (Integer) session.save(user);
             tx.commit();
 
         } catch (HibernateException e) {
@@ -25,9 +25,8 @@ public class MyTweetDAO {
             e.printStackTrace();
         } finally {
             session.close();
+
         }
-        return myTweetID;
+        return userID;
     }
-
-
 }

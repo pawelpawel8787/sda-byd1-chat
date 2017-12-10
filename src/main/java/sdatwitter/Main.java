@@ -1,13 +1,11 @@
-package sdatweeter;
+package sdatwitter;
 
 
-import org.hibernate.Session;
-import org.hibernate.type.TimestampType;
-import sdatweeter.model.DAO.MyTweetDAO;
-import sdatweeter.model.DAO.UserDAO;
-import sdatweeter.model.MyTweet;
-import sdatweeter.model.User;
-import sdatweeter.utility.HibernateUtil;
+import sdatwitter.model.DAO.MyTweetDAO;
+import sdatwitter.model.DAO.UserDAO;
+import sdatwitter.model.MyTwitter;
+import sdatwitter.model.User;
+import sdatwitter.utility.HibernateUtil;
 
 
 public class Main {
@@ -17,11 +15,11 @@ public class Main {
 
         //Session session = HibernateUtil.getHibernateSession();
 
-//
- //       MyTweetDAO myTweetDAO = new MyTweetDAO();
+
+//        MyTweetDAO myTweetDAO = new MyTweetDAO();
 //        UserDAO userDAO = new UserDAO();
 //        User user1 = new User();
-//        MyTweet myTweet1 = new MyTweet();
+//        MyTwitter myTweet1 = new MyTwitter();
 //
 //        user1.setNick("Janek");
 //        user1.setPass("Klocek");

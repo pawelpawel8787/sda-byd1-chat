@@ -1,4 +1,4 @@
-package sdatweeter.model;
+package sdatwitter.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +9,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "MY_TWEET")
-public class MyTweet {
+public class MyTwitter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

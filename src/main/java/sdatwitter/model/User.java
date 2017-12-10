@@ -1,6 +1,7 @@
-package sdatweeter.model;
+package sdatwitter.model;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -26,7 +27,7 @@ public class User {
     private String pass;
 
     @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
-    private List<MyTweet> orderList = new ArrayList<MyTweet>();
+    private List<MyTwitter> orderList = new ArrayList<MyTwitter>();
 
 
 }

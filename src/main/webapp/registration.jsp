@@ -1,12 +1,13 @@
 <%@ page import="sdatwitter.servlets.UserServlet" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
-<%@ page contentType="text/html" pageEncoding="utf-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Registration Form</title>
 </head>
 <body>
 <%
+
+
     String error = request.getParameter("error");
     if (error != null && "".equals(error)){
         out.println("Brak autora i/lub wpisu.");
@@ -20,7 +21,7 @@
         }
     }
 %>
-<form action="/index" method="post">
+<form action="/registration" method="post">
     <ul>
         <li>Nick: <input name="Nick" type="text" value="<%= author %>"></li>
         <li>Password: <input name="Password" type="text"></li>
@@ -28,8 +29,6 @@
     </ul>
     <input type="submit" value="Register">
 </form>
-
-
 
 </body>
 </html>

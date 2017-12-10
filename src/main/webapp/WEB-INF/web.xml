@@ -7,7 +7,7 @@
   
   <!--<servlet>-->
     <!--<servlet-name>helloTweetService</servlet-name>-->
-    <!--<servlet-class>com.sdatwitter.model.servlets.TweetServlet</servlet-class>-->
+    <!--<servlet-class>com.sdatwitter.model.servlTwitterServletvlet</servlet-class>-->
   <!--</servlet>-->
   <!--<servlet-mapping>-->
     <!--<servlet-name>helloTweetService</servlet-name>-->

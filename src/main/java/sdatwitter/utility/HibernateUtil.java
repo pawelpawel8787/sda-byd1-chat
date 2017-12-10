@@ -1,4 +1,4 @@
-package sdatweeter.utility;
+package sdatwitter.utility;
 
 
 import org.hibernate.HibernateException;
