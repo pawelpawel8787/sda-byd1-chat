@@ -21,12 +21,26 @@
     }
 %>
 <form action="/index" method="post">
+    Sign in if you don't have an account.
+    <br>
     <ul>
         <li>Nick: <input name="Nick" type="text" value="<%= author %>"></li>
         <li>Password: <input name="Password" type="text"></li>
+        <li>Confirm password: <input name="ConfirmPassword" type="text"></li>
 
     </ul>
     <input type="submit" value="Register">
+<br>
+<br>
+    Or Login if you have an account.
+
+    <ul>
+        <li>Nick: <input name="Nick" type="text"></li>
+        <li>Password: <input name="Password" type="text"></li>
+
+    </ul>
+<input type="submit" value="Login">
+
 </form>
 
 

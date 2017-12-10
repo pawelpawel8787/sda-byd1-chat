@@ -3,7 +3,6 @@ package sdatwitter.servlets;
 import com.google.common.base.Strings;
 import sdatwitter.model.DAO.UserDAO;
 import sdatwitter.model.User;
-import sdatwitter.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,18 +21,24 @@ public class UserServlet extends HttpServlet {
 
         String nick = (String) req.getParameter("Nick");
         String pass = (String) req.getParameter("Password");
+        String confirmPass = (String) req.getParameter("ConfirmPassword");
 
-        if (Strings.isNullOrEmpty(nick) && Strings.isNullOrEmpty(pass)) {
+        if (Strings.isNullOrEmpty(nick) && Strings.isNullOrEmpty(pass) && Strings.isNullOrEmpty(confirmPass)) {
 
-            resp.sendRedirect("/publish.jsp?error");
+            //resp.sendRedirect("/publish.jsp?error");
         } else {
 
             UserDAO userDAO = new UserDAO();
             User user1 = new User();
             user1.setNick(nick);
-            user1.setPass(pass);
+            if (!(pass.equals(confirmPass))) {
+                resp.getWriter().println("Podane hasła się nie zgadzają.");
 
-            userDAO.addUser(user1);
+            }else{
+                user1.setPass(pass);
+                userDAO.addUser(user1);
+                resp.sendRedirect("/index.jsp");
+            }
         }
     }
 }
