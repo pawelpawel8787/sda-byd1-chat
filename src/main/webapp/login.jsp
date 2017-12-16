@@ -21,7 +21,7 @@
         <li>Password: <input name="LoginPassword" type="text"></li>
 
     </ul>
-    <input type="submit" value="Login">
+    <input type="submit" value="Login" STYLE="font: 8pt Arial; font-style: italic; font-weight: bold; font-size: large; color:yellow; background:green; width:130px; height:50px;"/>
 
 </form>
 

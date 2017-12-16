@@ -36,8 +36,6 @@
 
     </tr>
     <%
-
-
         MyTweetDAO service = new MyTweetDAO();
         for (MyTwitter tweetList : service.getSelectedUserTweets(value)
                 ) {
@@ -50,6 +48,12 @@
     %>
 
 </table>
+<br>
+
+<form action="/twitterMessage.jsp">
+    <input type="submit" value="Add new Tweet"
+           STYLE="font: 8pt Arial; font-style: italic; font-weight: bold; font-size: large; color:yellow; background:green; width:180px; height:50px;"/>
+</form>
 
 
 </body>

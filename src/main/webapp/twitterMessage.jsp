@@ -1,4 +1,4 @@
-<%@ page import="sdatwitter.servlets.LoginServlet" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,15 +12,15 @@
 
 
             <p align="center">
-                Message: <br><textarea name="message"></textarea><br>
-                <input type="submit" name="author">
-                <input type="password" name="pass">
-                <input type="submit" name="submit" value="Submit">
+                Message: <br><textarea name="message" style="width: 300px; height: 200px;"></textarea><br>
+              <br>
+                <input type="submit" name="submit" value="Add tweet"
+                       STYLE="font: 8pt Arial; font-style: italic; font-weight: bold; font-size: large; color:yellow; background:green; width:130px; height:50px;"/>
             </p>
 
 
     </ul>
-    <input type="submit" value="Submit">
+
 </form>
 
 </body>
